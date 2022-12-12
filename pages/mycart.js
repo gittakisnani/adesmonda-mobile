@@ -1,0 +1,39 @@
+import { useState } from 'react'
+import Container from '../components/Container'
+import Meta from '../components/Meta';
+import MyCart from '../components/MyCart/MyCart'
+import Title from '../components/Title';
+
+const MyCartPage = () => {
+  const [checked, setChecked] = useState([]);
+
+  const handleChecked = (id) => {
+    setChecked(checked.includes(id) ? checked.filter(item => item !== id) : [...checked, id])
+  }
+
+  const handleCheckAll = () => {
+    const wasChecked = [1, 2, 3, 4].every(item => checked.includes(item))
+    setChecked(wasChecked ? [] : [1, 2, 3, 4])
+  }
+
+  return (
+    <>
+      <Meta title='My Cart' />
+        <section className='mb-10'>
+            <div className="px-4"><Title title='my cart' /></div>
+            <Container className='flex flex-col flex-1 gap-4'>
+                <label htmlFor="checkAll" className='flex gap-2 items-center px-2'>
+                    <input onChange={handleCheckAll} checked={[1, 2, 3, 4].every(item => checked.includes(item))} type="checkbox" className='accent-primary h-5 w-5' id="checkAll" />
+                    <p style={{ fontFamily: 'Marcellus'}} className='uppercase text-md leading-5'>Check all</p>
+                </label>
+                <MyCart id={1} handleChecked={() => handleChecked(1)} checked={checked} />
+                <MyCart id={2} handleChecked={() => handleChecked(2)} checked={checked} />
+                <MyCart id={3} handleChecked={() => handleChecked(3)} checked={checked} />
+                <MyCart id={4} handleChecked={() => handleChecked(4)} checked={checked} />
+            </Container>
+        </section>
+    </>
+  )
+}
+
+export default MyCartPage
