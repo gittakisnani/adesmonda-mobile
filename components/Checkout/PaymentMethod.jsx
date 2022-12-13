@@ -5,7 +5,6 @@ import BNI from '../../public/assets/images/BNI.svg'
 import Mandiri from '../../public/assets/images/Mandiri.svg'
 import BCA from '../../public/assets/images/BCA.svg'
 import BRI from '../../public/assets/images/BRI.svg'
-import Image from 'next/image'
 import MethodPaymentItem from './MethodPaymentItem'
 const PaymentMethodCheckout = () => {
     const [isOpen, setIsOpen] = useState(false);

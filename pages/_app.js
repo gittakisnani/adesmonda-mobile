@@ -1,6 +1,5 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Newsletter from '../components/NewsLetter'
 import '../styles/globals.css'
 import BottomNavbar from '../components/BottomNavBar'
 
@@ -9,7 +8,6 @@ function MyApp({ Component, pageProps }) {
     <main>
     <Header />
     <Component {...pageProps} />
-    {/* <Newsletter /> */}
     <Footer />
     <BottomNavbar />
     </main>

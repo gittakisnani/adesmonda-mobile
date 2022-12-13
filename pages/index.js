@@ -8,7 +8,7 @@ import ShopInSection from '../components/Home/ShopIn'
 import Table from '../components/Home/Table'
 import Meta from '../components/Meta'
 import Order from '../components/OrderModal'
-
+import NewsLetter from '../components/NewsLetter'
 export default function Home() {
   return (
     <>
@@ -21,6 +21,7 @@ export default function Home() {
       <OurProducts />
       <OurCatalog />
       <Inspiration />
+      <NewsLetter />
     </>
   )
 }

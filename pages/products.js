@@ -10,7 +10,7 @@ const Products = () => {
     const [filter, setFilter] = useState(false);
     const [filters, setFilters] = useState({
         category: [],
-        sort: 'default',
+        sort: 'Default',
         price: [0, 1000]
     })
     const handleFilter = () => {
@@ -30,10 +30,13 @@ const Products = () => {
             <div className='px-4'><Title title='products' /></div>
             <Container className='flex flex-col gap-6'>
                 <div className='flex items-center gap-2 overflow-x-auto filtersWrapper'>
-                    {filters.sort !== 'default' && <p style={{  background: 'linear-gradient(90deg, #FFFFFF 0%, #FFF3E5 100%)'}} className='whitespace-nowrap text-xs rounded-lg p-1 px-2'>{filters.sort}</p>}
+                    {filters.sort !== 'Default' && <p style={{  background: 'linear-gradient(90deg, #FFFFFF 0%, #FFF3E5 100%)'}} className='whitespace-nowrap text-xs rounded-lg p-1 px-2'>{filters.sort}</p>}
                     {filters.category?.map((cat, index) => (
                         <p style={{  background: 'linear-gradient(90deg, #FFFFFF 0%, #FFF3E5 100%)'}} className='whitespace-nowrap text-xs rounded-lg p-1 px-2' key={index}>{cat}</p>
                     ))}
+                    {filters.price[0] > 0 && filters.price[1] && <p style={{  background: 'linear-gradient(90deg, #FFFFFF 0%, #FFF3E5 100%)'}} className='whitespace-nowrap text-xs rounded-lg p-1 px-2'>{filters.price[0]}-{filters.price[1]}</p>
+                    }
+                    
                 </div>
                 <div className='flex justify-between items-center gap-4'>
                     <form className='flex-1'>

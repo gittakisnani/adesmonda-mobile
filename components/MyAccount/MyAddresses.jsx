@@ -13,9 +13,9 @@ const MyAddresses = () => {
             <span className='text-3xl'>+</span> Add Address
           </Link>
         </h6>
-        <MyAddress />
-        <MyAddress />
-        <MyAddress />
+        <MyAddress title='Mas DW' main desc='Jl Brigjen H Kassim Lr Santoso No 1307 X Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan' number='087897877411' />
+        <MyAddress title='Mas DW' desc='Jl Brigjen H Kassim Lr Santoso No 1307 X Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan' number='087897877411' />
+        <MyAddress title='Mas DW' desc='Jl Brigjen H Kassim Lr Santoso No 1307 X Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan' number='087897877411' />
         </div>
     </>
   )

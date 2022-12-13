@@ -1,4 +1,8 @@
 import { IoMdClose } from 'react-icons/io'
+import 'primeicons/primeicons.css';
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
+import 'primereact/resources/primereact.css'
+import { Slider } from 'primereact/slider';
 
 const categories = {
     table: ['Dining Table', 'Office Table', 'Cafe and Bar Table', 'Coffee Table', 'Console Table', 'Side Table'],
@@ -26,7 +30,7 @@ const Filter = ({ handleFilter, filters, setFilters }) => {
     }
 
     const handleReset = () => {
-        setFilters({ category: [], sort: 'default', price: [0, 1000]})
+        setFilters({ category: [], sort: 'Default', price: [0, 1000]})
     }
 
 
@@ -60,13 +64,24 @@ const Filter = ({ handleFilter, filters, setFilters }) => {
             <p className='font-medium leading-4'>Sort by</p>
             {sort.map(sortType => (
                 <label key={sortType.split(' ')[0]} className='flex items-center gap-2'>
-                    <input value={sortType} onChange={handleSort} type='radio' name='sort' className='appearance-none bg-white checked:bg-slate-400 cursor-pointer outline-none h-5 w-5 rounded-full accent-slate-800' />
+                    <input value={sortType} onChange={handleSort} checked={filters.sort.toLowerCase() === sortType.toLowerCase()} type='radio' name='sort' className='appearance-none bg-white checked:bg-slate-400 cursor-pointer outline-none h-5 w-5 rounded-full accent-slate-800' />
                     <p className='tracking-[0.5px] text-xs leading-5 capitalize'>{sortType}</p>
                 </label>
             ))}
         </div>
         <div style={{ background: 'rgba(0, 68, 65, 0.05)'}} className='p-2 flex flex-col gap-4 mt-2'>
             <p className='font-medium leading-4'>Price range</p>
+            <div className='px-5 mt-5 flex flex-col gap-3'>
+                <Slider min={0} max={1000} range value={filters.price} onChange={e => setFilters({...filters, price: e.value})} />
+                <div className='flex gap-4 items-center justify-center'>
+                    <div className='p-2 rounded-md text-xs leading-5 bg-white'>
+                        Rp {filters.price[0]}
+                    </div>
+                    <div className='p-2 rounded-md text-xs leading-5 bg-white'>
+                        Rp {filters.price[1]}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   )

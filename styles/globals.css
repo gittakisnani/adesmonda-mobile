@@ -51,3 +51,12 @@ h2 {
 .filtersWrapper::-webkit-scrollbar {
   display: none;
 }
+
+span.p-slider-range {
+  background: #004441 !important;
+}
+
+.p-slider-handle {
+  border-color: #004441 !important;
+  background: #004441 !important;
+}

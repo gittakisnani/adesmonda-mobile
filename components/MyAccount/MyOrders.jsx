@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
+import Title from '../Title'
 import MyOrder from './myOrder'
 
 const MyOrders = () => {
@@ -8,6 +9,7 @@ const MyOrders = () => {
 
   return (
     <div className='flex flex-col gap-4 w-full'>
+        <Title title='My Orders' />
         <input className='border p-2 rounded-md w-full' type="text" />
         <div className='flex gap-5 items-center overflow-y-auto types'>
             {['all', 'complete', 'on process', 'on delivery', 'cancelled', 'expired', 'awaiting payment'].map((tab, index) => (
@@ -19,12 +21,11 @@ const MyOrders = () => {
             ))}
         </div>
         <MyOrder />
-        <MyOrder />
-        <MyOrder />
-        <MyOrder />
-        <MyOrder />
-        <MyOrder />
-        <MyOrder />
+        <MyOrder status='Delivery' />
+        <MyOrder status='Completed' />
+        <MyOrder status='Expired' />
+        <MyOrder status='Expired' />
+        <MyOrder status='Expired' />
     </div>
   )
 }
