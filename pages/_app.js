@@ -5,10 +5,9 @@ import BottomNavbar from '../components/BottomNavBar'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main>
+    <main className='min-h-screen relative flex flex-col'>
     <Header />
     <Component {...pageProps} />
-    <Footer />
     <BottomNavbar />
     </main>
   )

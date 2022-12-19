@@ -1,15 +1,12 @@
-import React, { useState } from 'react'
 import CustomOrderItem from './CustomOrderItem'
 import ItemOrder from './ItemOrder'
 import MyAddress from './MyAddress'
 import OrderSummary from '../OrderSummary'
 import CustomButton from '../CustomButton'
-import OrderModal from '../OrderModal'
 import Title from '../Title'
-const CustomOrder = () => {
-  const [request, setRequest] = useState(false);
 
-  if(request) return <OrderModal />
+
+const CustomOrder = () => {
   return (
     <section className='mb-10'>
         <Title title={'Orders'} />
@@ -22,10 +19,10 @@ const CustomOrder = () => {
                 <ItemOrder />
                 <ItemOrder />
                 </div>
-              <MyAddress includeChange={false} includeTrash={false} style={{background: 'rgba(0, 68, 65, 0.05)'}} />
+              <MyAddress title='Mas DW' main desc='Jl Brigjen H Kassim Lr Santoso No 1307 X Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan' number='087897877411' includeChange={false} includeTrash={false} style={{background: 'rgba(0, 68, 65, 0.05)'}} />
               <OrderSummary />
         </div>
-        <CustomButton onClick={() => setRequest(true)} text='Request Invoice' />   
+        <CustomButton text='Request Invoice' />   
         </div>
     </section>
   )

@@ -20,7 +20,7 @@ const MyOrder = ({ title = 'Inv-004', date = '20 October 2022', number = 3, tota
         <p className='text-xs text-[#9CB6B5]'>{date}</p>
         <div className='h-px w-full bg-[#9CB6B5]'></div>
         <div className='flex justify-between items-center'>
-            <div className='flex flex-col px-2'>
+            <div className='flex flex-col'>
                 <p className='text-[#121212] text-sm tracking-[2px]'>{number} Products</p>
                 <p style={{ fontFamily: 'Plus Jakarta Sans'}} className='text-[#121212] text-sm tracking-[2px] leading-6 font-bold'>Rp {total}</p>
             </div>

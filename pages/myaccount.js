@@ -14,22 +14,23 @@ import MyOrders from '../components/MyAccount/MyOrders'
 import CustomOrder from '../components/MyAccount/CustomOrder'
 import Meta from '../components/Meta'
 import Title from '../components/Title'
+import Footer from '../components/Footer'
 const MyAccountPage = () => {
   const router = useRouter()
   return (
    <>
     <Meta title='My Account' />
-    <section className='mb-10'>
+    <section className='mb-10 flex-1'>
       {!router.query.tab && !router.query.order && <>
         <div className='px-4'><Title title='my account' /></div>
         <Container className='flex flex-col flex-1 gap-4'>
           <div className='flex justify-between items-center gap-4'>
-            <div className='w-[100px] h-[100px] rounded-full overflow-hidden'>
+            <div className='min-w-[100px] min-h-[100px] rounded-full overflow-hidden'>
               <Image src={ProfilePicture} alt='Profile Picture' className='h-full w-full bg-cover' />
             </div>
             <div className='flex flex-col gap-2'>
               <h4 className='text-xl leading-7 font-bold'>
-              Estetico Admin Aja 
+              Estetico Admin Aja
               </h4>
               <p className='text-xs leading-5 text-[#9CB6B5]'>087897877411</p>
             </div>
@@ -38,7 +39,7 @@ const MyAccountPage = () => {
             </Link>
           </div>
           <Tab value='2 Addresses' text='Addresses' link='/myaccount?tab=my-addresses' />
-          <Tab value='2 Orders' text='Orders' link='/myaccount?tab=my-orders' />
+          <Tab value='2 Orders' text='Orders' link='/myaccount?tab=my-orders&type=all' />
           <div style={{ backgroundColor: 'rgba(0, 68, 65, 0.02)'}} className='flex flex-col gap-2 rounded-lg p-2 py-7 border-red-600 border-2'>
             <p className='font-bold text-xl leading-8 text-red-600'>Logout</p>
           </div>  
@@ -52,7 +53,8 @@ const MyAccountPage = () => {
       {router.query.tab === 'my-orders' &&  <MyOrders />}
       {router.query.order &&  <CustomOrder />}
       </Container>
-      </section>
+    </section>
+    {!router.query.tab && !router.query.order && <Footer />}
    </>
   )
 }

@@ -9,8 +9,12 @@ const OurCatalog = () => {
     <section className='flex flex-col gap-4 px-4 mb-10'>
         <Container style={{ background: 'rgba(0, 68, 65, 0.05)'}} className='flex flex-col gap-4 py-4 px-0'>
             <h4 style={{ fontFamily: 'Marcellus'}} className='uppercase mb-2 leading-5 tracking-[0.25em] text-lg text-center'>Koleksi Kami</h4>
+            <div className='rounded-lg overflow-hidden'>
             <Image src={Catalog} alt='Catalog' className='w-full' />
+            </div>
+            <div className='rounded-lg overflow-hidden'>
             <Image src={Catalog} alt='Catalog' className='w-full' />
+            </div>
             <div className='flex justify-center items-center'>
                 <Button />
             </div>
@@ -20,7 +24,7 @@ const OurCatalog = () => {
             <div className='p-3'>
                 <h5 className='text-textBlack font-bold leading-6'>Katalog Kami</h5>
                 <p className='text-xs leading-4 my-2'>Temukan inspirasi anda dari katalog terbaru kami</p>
-                <button style={{ background: 'linear-gradient(283.53deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 101.57%), #004441'}} className='w-[111px] h-[44px] rounded-xl text-xs leading-3 tracking-[1.5px] font-medium text-white'>
+                <button style={{ background: 'linear-gradient(283.53deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 101.57%), #004441', boxShadow: 'inset 1px 1px 4px rgba(0, 0, 0, 0.2), inset -3px -3px 12px rgba(0, 0, 0, 0.5)'}} className='w-[111px] h-[44px] rounded-xl text-xs leading-3 tracking-[1.5px] font-medium text-white'>
                 Lihat Katalog
                 </button>
             </div>

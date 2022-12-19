@@ -9,6 +9,7 @@ import Table from '../components/Home/Table'
 import Meta from '../components/Meta'
 import Order from '../components/OrderModal'
 import NewsLetter from '../components/NewsLetter'
+import Footer from '../components/Footer'
 export default function Home() {
   return (
     <>
@@ -22,6 +23,7 @@ export default function Home() {
       <OurCatalog />
       <Inspiration />
       <NewsLetter />
+      <Footer />
     </>
   )
 }

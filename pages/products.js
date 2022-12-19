@@ -5,6 +5,7 @@ import Product from '../components/Home/Product';
 import Filter from '../components/Filter';
 import Meta from '../components/Meta';
 import Title from '../components/Title';
+import Footer from '../components/Footer';
 const Products = () => {
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState(false);
@@ -55,6 +56,7 @@ const Products = () => {
                 </div>
             </Container>
         </section>
+        <Footer />
     </>
   )
 }

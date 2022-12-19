@@ -7,9 +7,20 @@ import { HiOutlineTrash } from 'react-icons/hi'
 
 const MyCart = ({ id, checked, handleChecked, src = WishListPicture, color, title, price }) => {
     const [number, setNumber] = useState(1);
+    const [remove, setRemove] = useState(false)
+    const decreaseNumber = () => {
+        if(number <= 1) {
+            if(confirm('You want to delete the the cart item?')) {
+                return setRemove(true)
+            }
 
-    const decreaseNumber = () => setNumber(number - 1)
-    const increaseNumber = () => setNumber(number + 1)
+            return
+        }
+        setNumber(number - 1)
+    }
+    const increaseNumber = () => setNumber(number + 1);
+
+    if(remove) return null
   return (
     <div style={{ background: 'rgba(0, 68, 65, 0.05)'}} className='rounded-sm p-2 flex items-center gap-4'>
         <div className='flex gap-2'>

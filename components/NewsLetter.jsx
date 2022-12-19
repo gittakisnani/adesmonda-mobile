@@ -3,7 +3,7 @@ import Container from './Container'
 
 const Newsletter = () => {
   return (
-    <section  style={{ background: 'rgba(255, 255, 255, 0.4)', backgroundBlendMode: 'background-blend-mode: soft-light, normal'}}>
+    <section style={{ background: 'linear-gradient(317.7deg, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 105.18%), #EDEEEE', backgroundBlendMode: 'soft-light, normal'}}>
     <Container className='py-4'>
         <h3
         className='text-center font-bold text-[34px] leading-10'
@@ -12,7 +12,8 @@ const Newsletter = () => {
         <form className='flex flex-col gap-10 mt-10 items-center'>
             <input 
                 type="text" 
-                className='p-3 text-[#C4C4C4] bg-transparent shadow-inner outline-none border border-gray-100 rounded-lg w-full placeholder:text-xs'
+                style={{ background: 'linear-gradient(317.7deg, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 105.18%), #ECEEEE', boxShadow: 'inset -2px -2px 8px #FFFEFA, inset 2px 2px 8px #BDB9A6', borderColor: 'rgba(226, 220, 209, 0.5)'}}
+                className='p-3 bg-blend-soft-light text-[#C4C4C4] outline-none border-2 rounded-lg w-full placeholder:text-xs'
                 placeholder='Ex: 081234567896'
             />
             <button className='text-[#FCF6F6] bg-primary mt-6 uppercase text-lg mx-auto tracking-[0.2em] rounded-[32px] w-[178px] h-[53px] font-[800]'>Subscribe</button>

@@ -19,8 +19,8 @@ const Payment = () => {
   return (
     <>
         <Meta title='Payment' /> 
-        <section className='my-10'>
         <div className='px-4'><Title title='payment' /></div>
+        <section className='mb-10'>
             <Container className='flex flex-col flex-1 gap-4'>
                 <div style={{ backgroundColor: 'rgba(0, 68, 65, 0.02)'}} className='rounded-xl p-2 pr-4 flex flex-col gap-2'>
                         <div className='flex justify-between items-center'>

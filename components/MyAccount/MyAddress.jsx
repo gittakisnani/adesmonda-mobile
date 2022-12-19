@@ -6,7 +6,8 @@ import Trash from '../../public/assets/images/Trash.svg'
 const MyAddress = ({ style = null, includeTrash = true, includeChange = true, main = false, title, desc, number }) => {
   return (
     <div style={style || { background: 'rgba(255, 255, 255, 0.01)'}} className='p-2 pr-4 flex flex-col gap-3 border border-[#D9D9D9] rounded-xl'>
-        <div  className='flex justify-between items-center '>
+            <h4 className="font-bold leading-6">Shipping Address</h4>
+          <div  className='flex justify-between items-center '>
             <div className='flex items-center gap-2'>
                 {main && <p className='bg-primary text-white text-[10px] p-0.5 px-1 rounded-md'>Main Address</p>}
                 <p className='tracking-[1px] font-bold text-sm'>{title}</p>

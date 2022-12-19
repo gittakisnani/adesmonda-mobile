@@ -39,7 +39,7 @@ const NavBar = ({ handleNavBar }) => {
         setCategory('')
     }
   return (
-    <nav className='fixed top-0 right-0 bottom-0 z-50 w-[67%] bg-primary flex flex-col justify-between p-4 overflow-y-auto'>
+    <nav className='fixed top-0 right-0 bottom-0 z-[100] w-[67%] bg-primary flex flex-col justify-between p-4 overflow-y-auto'>
         <div>
             <div className='flex gap-3 items-center border-b border-white pb-4 mb-4'>
                 {category && <button onClick={() => setCategory('')} className='text-2xl text-white'>

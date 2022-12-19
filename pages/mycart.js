@@ -3,10 +3,11 @@ import Container from '../components/Container'
 import Meta from '../components/Meta';
 import MyCart from '../components/MyCart/MyCart'
 import Title from '../components/Title';
-
+import OrderSummary from '../components/OrderSummary'
+import { useRouter } from 'next/router';
 const MyCartPage = () => {
   const [checked, setChecked] = useState([]);
-
+  const router = useRouter()
   const handleChecked = (id) => {
     setChecked(checked.includes(id) ? checked.filter(item => item !== id) : [...checked, id])
   }
@@ -32,6 +33,7 @@ const MyCartPage = () => {
                 <MyCart price='3.900.000' title='black string couple coffee table' color='black' id={4} handleChecked={() => handleChecked(4)} checked={checked} />
             </Container>
         </section>
+        <OrderSummary onClick={() => router.push('/checkout')} includeSubtotal />
     </>
   )
 }

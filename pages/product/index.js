@@ -6,6 +6,8 @@ import Share from '../../public/assets/images/Share.svg'
 import Product from '../../components/Home/Product'
 import ImageItem from '../../components/Product/Image'
 import Meta from '../../components/Meta'
+import Footer from '../../components/Footer'
+import Controller from '../../components/Variant/Controller'
 const ProductPage = () => {
   return (
     <>
@@ -25,10 +27,7 @@ const ProductPage = () => {
                     <p className='line-through text-textRed leading-4 text-xs tracking-[2px]'>Rp 999.999.999</p>
                 </div>
                 <p className='font-bold text-lg leading-5 tracking-[1.5px]'>Pattern:</p>
-                <div className='flex justify-between items-center my-2'>
-                    <p className='text-xs leading-[18px] text-primary'>Perletto Royale</p>
-                    <p className='underline text-xs leading-3 font-semibold text-primary'>Change</p>
-                </div>
+                <Controller />
                 <div className='flex flex-col gap-2'>
                     <h5 style={{ fontFamily: 'Marcellus'}} className='text-lg leading-7 tracking-[0.25em] uppercase'>Description</h5>
                     <p className='text-text-textBlack tracking-[0.5px] leading-4 text-xs '>
@@ -53,6 +52,7 @@ const ProductPage = () => {
             </div>
         </Container>
     </section>
+    <Footer />
     </>
   )
 }

@@ -60,3 +60,19 @@ span.p-slider-range {
   border-color: #004441 !important;
   background: #004441 !important;
 }
+
+.swiper-slide-active {
+  backdrop-filter: blur(0);
+  transform: scaleY(110%) !important;
+  opacity: 100% !important;
+}
+
+.swiper-slide:active {
+  background-color: rgba(255, 255, 255, 0.733) !important;
+  transition: all ease-in-out 300ms;
+  opacity: 100% !important;
+}
+
+.swiper-slide {
+  transition: all ease-in-out 300ms;
+}

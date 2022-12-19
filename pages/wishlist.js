@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '../components/Container'
+import Footer from '../components/Footer'
 import Meta from '../components/Meta'
 import Title from '../components/Title'
 import WishListItem from '../components/WishList/WishListItem'
@@ -17,6 +18,7 @@ const wishlist = () => {
               <WishListItem src={ProductPicture2} title='black string couple coffee table' price={'123.456.789'} color='Black' />
             </Container>
         </section>
+        <Footer />
     </>
   )
 }
