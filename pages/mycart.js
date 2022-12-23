@@ -20,7 +20,7 @@ const MyCartPage = () => {
   return (
     <>
       <Meta title='My Cart' />
-        <section className='mb-10'>
+        <section className='flex gap-2 flex-col flex-1'>
             <div className="px-4"><Title title='my cart' /></div>
             <Container className='flex flex-col flex-1 gap-4'>
                 <label htmlFor="checkAll" className='flex gap-2 items-center px-2'>
@@ -32,8 +32,8 @@ const MyCartPage = () => {
                 <MyCart price='3.900.000' title='black string couple coffee table' color='black' id={3} handleChecked={() => handleChecked(3)} checked={checked} />
                 <MyCart price='3.900.000' title='black string couple coffee table' color='black' id={4} handleChecked={() => handleChecked(4)} checked={checked} />
             </Container>
-        </section>
         <OrderSummary onClick={() => router.push('/checkout')} includeSubtotal />
+        </section>
     </>
   )
 }

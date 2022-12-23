@@ -18,17 +18,145 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+# Mobile Version
 
-To learn more about Next.js, take a look at the following resources:
+## Libraries Used:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Swiper version ^8.4.5
+- primeicon version ^6.0.1 & primereact version ^8.7.3 
+- react-icons version ^4.7.1
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Frameworks Used:
 
-## Deploy on Vercel
+- NextJS
+- Tailwindcss
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Components
+- Pages
+- Public
+- Styles
+- Utils
+
+
+### Pages
+# There are 7 pages and one dynamic page (Single Product Page)
+  - index.js (Home page)
+  - myaccount (User settings page)
+  - mycart (User's cart page)
+  - payment (User's payment page)
+  - products
+  - whishlist (User's Wishlist page)
+  - checkout (User's checkout page)
+  - product > id.js (Single product page)
+
+
+### Components
+
+- Checkout:
+  - MethodPaymentItem: Accepts 5 props (method, setMethod, src, id, text)
+    - method and setMethod are the state of MethodPayment DropDown
+    - src is the image of the method
+    - id is the id of the method (bank)
+    -text is the title pf the method (Bank) 
+  - MethodPayment is the drop down has two state variables:
+    - open a boolean variable to open/close the dropdown
+    - method to show the method selected
+
+- Home:
+  - HeroSection the top section
+  - Inspiration to show inspiration items
+  - InspirationEntity accepts three props: 
+    - src: the image to show.
+    - date: the date of the inspiration
+    - desc: the description of the inspiration 
+  - NewArrival the slider of the home page
+  - NewArrivalProduct
+  - Our Catalog
+  - Our Products grid of products.
+  - Product accepts five props:
+    - src is the image source
+    - title is the product's title
+    - category is the product's category
+    - price is the product's price
+    - priceBefore is the price before the discount (optional)
+
+- MyAccount:
+  - AddAddress
+  - CustomOrder accepts five props:
+    - title
+    - date
+    - numberOfProducts
+    - price
+    - status
+  - EditAddress
+  - ItemOrder accepts five props:
+    - src
+    - title
+    - color
+    - numberOfProducts
+    - price (for one product)
+  - MyAccount
+  - MyAddresses
+  - MyOrders
+  - Tab accepts three props
+    - text
+    - link
+    - value
+  - MyAddress accepts seven props:
+    - style (object of css styles) (optional)
+    - main (boolean) (optional) (default = false)
+    - includeTrash
+    - includeChange
+    - title
+    - desc is the description of the address
+    - number (Phone Number).
+  - MyAddress accepts 5 props:
+    - title
+    - date
+    - number
+    - total
+    - status
+- MyCart:
+  - MyCart accepts seven props:
+    - src
+    - title
+    - color
+    - price
+    - checked
+    - handleChecked (check / uncheck the cart).
+    - id
+- Product:
+  - Image accepts two props:
+    - src is teh source of the primary image
+    - images is an array of images src (4 items)
+- Variant:
+  - Controller to handle change and show the variant.
+  - VariantItem accepts three props:
+    - src
+    - text
+    - setVariant (to handle the variant of the product)
+  - Variant Modal accepts two props:
+    - setVariant   
+    - handleShowModal (to open / close variantModal)
+- WishList:
+  - WishListItem accepts four props:
+    - src
+    - title
+    - price
+    - color
+- Filter accepts three props:
+  - setFilters
+  - filters
+  - handleFilter (to handle filters settings)
+
+- NavBar accepts one prop:
+  - handleNavBar (to open / close navbar)
+
+- Title accepts one prop: title
+
+
+
+
+

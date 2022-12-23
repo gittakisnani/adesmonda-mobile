@@ -3,7 +3,7 @@ import { AiOutlineHeart } from 'react-icons/ai'
 import NewArrivalProductBG from '../../public/assets/images/NewArrivalProductBG.svg'
 const NewArrivalProduct = () => {
   return (
-    <div className='border-2 select-none border-gray-200 rounded-lg opacity-80 bg-gray-200/50 backdrop-blur-[10px] flex flex-col'>
+    <div className='border-2 select-none max-w-fit border-gray-200 rounded-lg opacity-80 bg-gray-200/50 backdrop-blur-[10px] flex flex-col'>
         <div className='flex justify-between items-center gap-4 px-4 transitions scale-y-[70%]'>
             <h5 style={{ fontFamily: 'Marcellus' }} className='text-lg leading-6 tracking-[0.25em]'>
             Cavallo

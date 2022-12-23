@@ -61,18 +61,22 @@ span.p-slider-range {
   background: #004441 !important;
 }
 
-.swiper-slide-active {
+.new-arrival .swiper-slide-active {
   backdrop-filter: blur(0);
   transform: scaleY(110%) !important;
   opacity: 100% !important;
 }
 
-.swiper-slide:active {
+.new-arrival .swiper-slide:active, 
+.new-arrival .swiper-slide:focus,
+.new-arrival .swiper-slide:hover {
   background-color: rgba(255, 255, 255, 0.733) !important;
   transition: all ease-in-out 300ms;
   opacity: 100% !important;
 }
 
-.swiper-slide {
+
+.new-arrival .swiper-slide {
   transition: all ease-in-out 300ms;
+  max-width: fit-content;
 }
