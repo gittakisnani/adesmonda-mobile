@@ -41,7 +41,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 
 ### Pages
-# There are 7 pages and one dynamic page (Single Product Page)
+##### There are 7 pages and one dynamic page (Single Product Page)
   - index.js (Home page)
   - myaccount (User settings page)
   - mycart (User's cart page)
