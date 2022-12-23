@@ -20,17 +20,18 @@ const NewArrival = () => {
     <section className='new-arrival mb-10'>
         <h2 className='text-center uppercase mb-4'>New Arrival</h2>
 
-        <Container className='w-full select-none max-w-[440px] overflow-hidden'>
-            <div className='relative w-full min-h-[250px] flex items-center'>
+        <Container className='w-full h-[261px] select-none max-w-[440px] overflow-hidden'>
+            <div className='relative w-full h-full flex items-center'>
               <div className="absolute inset-0">
                 <Image style={{ width: '100%'}} src={NewArrivalBG} alt='BG' />
               </div>
               <Swiper 
               modules={[Navigation, EffectFade]}
               navigation
+              slidesOffsetBefore={125}
               slidesPerView={1.75}
-              spaceBetween={40}
-              className='min-h-[250px] items-center flex '
+              spaceBetween={20}
+              className='items-center flex h-full'
               >
                 <SwiperSlide >
                   <NewArrivalProduct />

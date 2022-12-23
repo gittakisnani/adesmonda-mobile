@@ -61,15 +61,9 @@ span.p-slider-range {
   background: #004441 !important;
 }
 
-.new-arrival .swiper-slide-active {
-  backdrop-filter: blur(0);
-  transform: scaleY(110%) !important;
-  opacity: 100% !important;
-}
 
-.new-arrival .swiper-slide:active, 
-.new-arrival .swiper-slide:focus,
-.new-arrival .swiper-slide:hover {
+
+.new-arrival .swiper-slide:active {
   background-color: rgba(255, 255, 255, 0.733) !important;
   transition: all ease-in-out 300ms;
   opacity: 100% !important;
@@ -77,6 +71,23 @@ span.p-slider-range {
 
 
 .new-arrival .swiper-slide {
+  backdrop-filter: blur(4px);
   transition: all ease-in-out 300ms;
   max-width: fit-content;
+  border-radius: .5rem;
+  transform: scaleY(80%) !important;
+}
+
+
+.new-arrival .swiper-slide.swiper-slide-active {
+  backdrop-filter: blur(10px) !important;
+  transform: scaleY(100%) !important;
+  opacity: 100% !important;
+}
+
+.new-arrival .swiper-slide.swiper-slide-active .title {
+  font-size: 18px;
+}
+.new-arrival .swiper-slide.swiper-slide-active .type {
+  font-size: 14px;
 }

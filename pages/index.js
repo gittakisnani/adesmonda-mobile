@@ -10,6 +10,7 @@ import Meta from '../components/Meta'
 import Order from '../components/OrderModal'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
+import BottomNavbar from '../components/BottomNavBar'
 export default function Home() {
   return (
     <>
@@ -24,6 +25,7 @@ export default function Home() {
       <Inspiration />
       <NewsLetter />
       <Footer />
+      <BottomNavbar />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsCheck2 } from 'react-icons/bs'
-const CustomOrderItem = ({ title = 'Inv-004', date = '20 October 2022'. numberOfProducts = 3, price = '300.000.000', status = 'Complete'}) => {
+const CustomOrderItem = ({ title = 'Inv-004', date = '20 October 2022', numberOfProducts = 3, price = '300.000.000', status = 'Complete'}) => {
   return (
     <div style={{ backgroundColor: 'rgba(0, 68, 65, 0.05)'}} className='border rounded-xl border-[#E2DCD1] p-4 flex flex-col gap-2'>
         <p className='font-bold text-sm leading-5 text-primary'>{title}</p>

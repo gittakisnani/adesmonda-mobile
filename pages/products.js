@@ -6,6 +6,7 @@ import Filter from '../components/Filter';
 import Meta from '../components/Meta';
 import Title from '../components/Title';
 import Footer from '../components/Footer';
+import BottomNavbar from '../components/BottomNavBar';
 const Products = () => {
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState(false);
@@ -57,6 +58,7 @@ const Products = () => {
             </Container>
         </section>
         <Footer />
+        <BottomNavbar />
     </>
   )
 }

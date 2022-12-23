@@ -12,9 +12,8 @@ const Checkout = () => {
   return (
     <>
     <Meta title='Checkout' />
-    {!request 
-    ?   <>  
-            <section className='mb-10 flex-1'>
+        <>
+        {request ? <OrderModal /> : <section className='flex-1 flex flex-col'>
             <div className="px-4"><Title title='checkout' /></div>
             <Container className='flex flex-col flex-1 gap-4'>
                 <Link href='/myaccount?tab=my-addresses'>
@@ -32,11 +31,10 @@ const Checkout = () => {
                 </div>
             </div>
             </Container>
-            </section> 
-            <OrderSummary onClick={() => setRequest(true)} includeSubtotal />
-        </>
-    : <OrderModal />}
-</>
+            <OrderSummary onClick={() => setRequest(true)} includeSubtotal />   
+        </section>}
+        </> 
+    </>
   )
 }
 

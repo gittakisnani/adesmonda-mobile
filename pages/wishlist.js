@@ -1,4 +1,5 @@
 import React from 'react'
+import BottomNavbar from '../components/BottomNavBar'
 import Container from '../components/Container'
 import Footer from '../components/Footer'
 import Meta from '../components/Meta'
@@ -19,6 +20,7 @@ const wishlist = () => {
             </Container>
         </section>
         <Footer />
+        <BottomNavbar />
     </>
   )
 }
