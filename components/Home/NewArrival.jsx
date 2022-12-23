@@ -5,7 +5,6 @@ import Image from 'next/image'
 import NewArrivalProduct from './NewArrivalProduct'
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Virtual } from 'swiper'
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,7 +25,7 @@ const NewArrival = () => {
                 <Image style={{ width: '100%'}} src={NewArrivalBG} alt='BG' />
               </div>
               <Swiper 
-              modules={[Navigation, EffectFade]}
+              modules={[Navigation]}
               navigation
               slidesOffsetBefore={125}
               slidesPerView={1.75}
