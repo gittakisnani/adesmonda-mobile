@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Title from '../Title'
-import MyOrder from './myOrder'
+import MyOrder from './MyOrder'
 
 const MyOrders = () => {
     const router = useRouter()
