@@ -27,7 +27,8 @@ const NewArrival = () => {
               <Swiper 
               modules={[Navigation]}
               navigation
-              slidesOffsetBefore={130}
+              slidesOffsetBefore={140}
+              slidesOffsetAfter={10}
               slidesPerView={1.75}
               spaceBetween={20}
               className='items-center flex h-full'
